@@ -1,0 +1,15 @@
+<menu class="bg-red-200">
+  <ul class="list-none">
+    <li>
+      <a href="#" [routerLink]="['/']" routerLinkActive="link-active">Home</a>
+    </li>
+    <li *ngFor="let o of globalService.siteLinks; index as i">
+      <a
+        href="#"
+        [routerLink]="o.label!.split(' ').join('-') | lowercase"
+        routerLinkActive="link-active"
+        >{{ o.label }}</a
+      >
+    </li>
+  </ul>
+</menu>

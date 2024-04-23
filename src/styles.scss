@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.scss";
+@import "primeicons/primeicons.css";
+
+:root {
+  --primary-dark: #baffc9;
+  --secondary-dark: #ff8ef9;
+  --primary-light: #96ceb4;
+  --secondary-light: #f2f6c3;
+  --alert: #ff6f69;
+}
+
+.bg-green {
+  background-color: var(--primary-dark);
+}
+
+.bg-yellow {
+  background-color: var(--secondary-dark);
+}
+
+.bg-yellow-light {
+  background-color: var(--secondary-light);
+}
+
+html {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: gilroy-regular;
+}
+
+h2 {
+  font-family: gilroy-regular;
+}
+
+h3 {
+  font-family: gilroy-regular;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+.p-menu {
+  width: max-content;
+}
+
+.font-gilroy-bold {
+  font-family: gilroy-bold;
+}
+
+.font-gilroy-extra-bold {
+  font-family: gilroy-extra-bold;
+}
+
+.font-gilroy-black {
+  font-family: gilroy-black;
+}
+
+.font-gilroy-heavy {
+  font-family: gilroy-heavy;
+}
+
+.font-gilroy-regular {
+  font-family: gilroy-regular;
+}
+
+.font-gilroy-medium {
+  font-family: gilroy-medium;
+}
+
+.font-gilroy-thin {
+  font-family: gilroy-thin;
+}
+
+@font-face {
+  font-family: gilroy-black;
+  src: url(fonts/Gilroy-Black.ttf);
+}
+
+@font-face {
+  font-family: gilroy-bold;
+  src: url(fonts/Gilroy-Bold.ttf);
+}
+
+@font-face {
+  font-family: gilroy-extra-bold;
+  src: url(fonts/Gilroy-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: gilroy-heavy;
+  src: url(fonts/Gilroy-Heavy.ttf);
+}
+
+@font-face {
+  font-family: gilroy-regular;
+  src: url(fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: gilroy-medium;
+  src: url(fonts/Gilroy-Medium.ttf);
+}
+
+@font-face {
+  font-family: gilroy-thin;
+  src: url(fonts/Gilroy-Thin.ttf);
+}

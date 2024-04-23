@@ -1,0 +1,109 @@
+<footer
+  class="flex w-full flex-column align-items-start align-content-between bg-bluegray-800 p-5"
+>
+  <div class="flex w-full flex-1 flex-row">
+    <div class="flex flex-1">
+      <a
+        href="javascript(void)"
+        [routerLink]="['/']"
+        routerLinkActive="link-active"
+        class="flex align-items-center justify-content-center"
+        ><span class="text-3xl font-gilroy-black">DEBT</span>
+        <span class="text-4xl font-gilroy-black logo-experts">EXPERTS</span>
+        <span class="text-sm">.</span>
+        <span class="text-sm">COM</span></a
+      >
+    </div>
+    <div class="flex flex-1">Debt Options</div>
+    <div class="flex flex-1">Site</div>
+  </div>
+  <div class="flex w-full flex-1 flex-row">
+    <div class="flex flex-1"></div>
+    <div class="flex flex-1 flex-column">
+      <ul class="list-none p-0">
+        <li *ngFor="let o of globalService.siteLinks; index as i">
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="[
+              'best-sites/',
+              o.label!.split(' ').join('-') | lowercase
+            ]"
+            routerLinkActive="link-active"
+            >Best {{ o.label }}s</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-1 flex-column">
+      <ul class="list-none p-0">
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/contact-us']"
+            routerLinkActive="link-active"
+            >Contact Us</a
+          >
+        </li>
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/terms-of-service']"
+            routerLinkActive="link-active"
+            >Terms of Service</a
+          >
+        </li>
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/privacy-policy']"
+            routerLinkActive="link-active"
+            >Privacy Policy</a
+          >
+        </li>
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/cookie-policy']"
+            routerLinkActive="link-active"
+            >Cookie Policy</a
+          >
+        </li>
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/advertiser disclosure']"
+            routerLinkActive="link-active"
+            >Advertiser Disclosure</a
+          >
+        </li>
+        <li>
+          <a
+            class="transition-duration-150 cursor-pointer mt-3 block"
+            href="#"
+            [routerLink]="['/site-map']"
+            routerLinkActive="link-active"
+            >Site Map</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="flex">
+    {{ globalService.globalState.siteNameDotCom }} is compensated by the
+    affiliates on this site but this does not influence our evaluations. We are
+    not paid to rank companies in any particular order and our opinions are our
+    own. The information contained in
+    {{ globalService.globalState.siteNameDotCom }} is not legal, financial, or
+    investment advice and is not an endorsement or recommendation of any of the
+    companies or the products or services appearing on
+    {{ globalService.globalState.siteNameDotCom }}. All information on
+    {{ globalService.globalState.siteNameDotCom }} is believed to be accurate
+    and is subject to change.
+  </div>
+</footer>

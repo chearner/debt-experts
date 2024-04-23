@@ -1,0 +1,30 @@
+{
+  "editor.wordWrapColumn": 500,
+  "notebook.output.wordWrap": true,
+  "editor.wordWrap": "on",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 500,
+  "prettier.proseWrap": "never",
+  "prettier.jsxSingleQuote": true,
+  "prettier.bracketSameLine": true,
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "html.format.wrapLineLength": 500,
+  "editor.formatOnSave": false,
+  "less.format.enable": false,
+  "scss.format.enable": true,
+  "html.format.enable": true,
+  "json.format.enable": true,
+  "html.format.wrapAttributes": "auto",
+  "html.format.contentUnformatted": "a,li,ul,ol",
+  "html.format.unformatted": "a,li,ul,ol",
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "prettier.bracketSpacing": false,
+  "prettier.embeddedLanguageFormatting": "auto",
+  "eslint.format.enable": true,
+  "json.format.keepLines": true,
+  "gutterpreview.imagePreviewMaxWidth": 300,
+  "editor.minimap.maxColumn": 500
+}
