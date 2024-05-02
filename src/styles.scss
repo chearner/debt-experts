@@ -74,15 +74,15 @@
 }
 
 .font-avenir-demi {
-  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
 }
 
 .font-avenir-regular {
-  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
 }
 
 .font-avenir-medium {
-  font-family: 'AvenirNextLTPro-Medium', sans-serif;
+  font-family: "AvenirNextLTPro-Medium", sans-serif;
 }
 
 :root {
@@ -94,7 +94,7 @@
   --maroon-light: #696169;
   --orange-light: #ff5037;
   --orange-dark: #e93418;
-  --orange-red: #F85E49;
+  --orange-red: #f85e49;
   --primary-color: rgb(49 43 65 / 100%);
   --primary-color-text: rgb(49 43 65 / 100%);
   --highlight-text-color: #ff5037;
@@ -119,24 +119,27 @@ body {
   padding: 0;
   margin: 0;
   background-color: var(--stone);
-  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
 }
 
 h1 {
-  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
 }
 
 h2 {
-  font-family: 'AvenirNextLTPro-Bold', sans-serif;
+  font-family: "AvenirNextLTPro-Bold", sans-serif;
 }
 
-h3, h4, h5, h6 {
-  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+h3,
+h4,
+h5,
+h6 {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
 }
 
 section {
   a {
-    font-family: 'AvenirNextLTPro-Demi', sans-serif;
+    font-family: "AvenirNextLTPro-Demi", sans-serif;
   }
 }
 
@@ -150,13 +153,21 @@ header {
   a:active,
   a:hover,
   a:visited {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
   }
 }
 
 footer {
   background-color: var(--sand);
+
+  a:link,
+  a:active,
+  a:hover,
+  a:visited {
+    color: var(--text-gray-900);
+    text-decoration: none;
+  }
 }
 
 .p-menu {
@@ -164,7 +175,7 @@ footer {
 }
 
 .updated {
-  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
   color: var(--orange-light);
   font-size: 1rem;
 }
