@@ -9,6 +9,7 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { PrimeNGConfig } from 'primeng/api';
 import { GlobalService } from './services/global.service';
 import { DividerModule } from 'primeng/divider';
+import { ParallaxDirective } from './directives/parallax.directive';
 
 @Component({
   selector: 'app-root',
@@ -23,6 +24,7 @@ import { DividerModule } from 'primeng/divider';
     CommonModule,
     DividerModule,
     BreadcrumbModule,
+    ParallaxDirective
   ],
   providers: [GlobalService],
   templateUrl: './app.component.html',

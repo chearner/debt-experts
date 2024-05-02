@@ -2,120 +2,169 @@
 @import "primeng/resources/primeng.css";
 @import "primeflex/primeflex.scss";
 @import "primeicons/primeicons.css";
+@import "./fonts/avenir/font.css";
+
+.dm-sans-200 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.dm-sans-400 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dm-sans-500 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.dm-sans-600 {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.josefin-sans-200 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.josefin-sans-300 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.josefin-sans-400 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.josefin-sans-600 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.josefin-sans-700 {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-avenir-demi {
+  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+}
+
+.font-avenir-regular {
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
+}
+
+.font-avenir-medium {
+  font-family: 'AvenirNextLTPro-Medium', sans-serif;
+}
 
 :root {
-  --primary-dark: #baffc9;
-  --secondary-dark: #ff8ef9;
-  --primary-light: #96ceb4;
-  --secondary-light: #f2f6c3;
-  --alert: #ff6f69;
+  --stone: #f5f6f0;
+  --sand: #ffebcc;
+  --cyan: #51e5da;
+  --ocean: #2d55aa;
+  --maroon-dark: #433a44;
+  --maroon-light: #696169;
+  --orange-light: #ff5037;
+  --orange-dark: #e93418;
+  --orange-red: #F85E49;
+  --primary-color: rgb(49 43 65 / 100%);
+  --primary-color-text: rgb(49 43 65 / 100%);
+  --highlight-text-color: #ff5037;
+  --text-dark: rgb(49 43 65 / 100%);
 }
 
-.bg-green {
-  background-color: var(--primary-dark);
+.bg-ocean {
+  background-color: var(--ocean);
 }
 
-.bg-yellow {
-  background-color: var(--secondary-dark);
-}
-
-.bg-yellow-light {
-  background-color: var(--secondary-light);
+.bg-sand {
+  background-color: var(--sand);
 }
 
 html {
+  font-size: 16px;
   padding: 0;
   margin: 0;
-}
-
-h1 {
-  font-family: gilroy-regular;
-}
-
-h2 {
-  font-family: gilroy-regular;
-}
-
-h3 {
-  font-family: gilroy-regular;
 }
 
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--stone);
+  font-family: 'AvenirNextLTPro-Regular', sans-serif;
 }
 
-a,
-a:link,
-a:active,
-a:hover,
-a:visited {
-  text-decoration: none;
+h1 {
+  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+}
+
+h2 {
+  font-family: 'AvenirNextLTPro-Bold', sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+}
+
+section {
+  a {
+    font-family: 'AvenirNextLTPro-Demi', sans-serif;
+  }
+}
+
+header {
+  svg {
+    color: var(--orange-light);
+    fill: var(--orange-light);
+  }
+
+  a:link,
+  a:active,
+  a:hover,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+footer {
+  background-color: var(--sand);
 }
 
 .p-menu {
   width: max-content;
 }
 
-.font-gilroy-bold {
-  font-family: gilroy-bold;
-}
-
-.font-gilroy-extra-bold {
-  font-family: gilroy-extra-bold;
-}
-
-.font-gilroy-black {
-  font-family: gilroy-black;
-}
-
-.font-gilroy-heavy {
-  font-family: gilroy-heavy;
-}
-
-.font-gilroy-regular {
-  font-family: gilroy-regular;
-}
-
-.font-gilroy-medium {
-  font-family: gilroy-medium;
-}
-
-.font-gilroy-thin {
-  font-family: gilroy-thin;
-}
-
-@font-face {
-  font-family: gilroy-black;
-  src: url(fonts/Gilroy-Black.ttf);
-}
-
-@font-face {
-  font-family: gilroy-bold;
-  src: url(fonts/Gilroy-Bold.ttf);
-}
-
-@font-face {
-  font-family: gilroy-extra-bold;
-  src: url(fonts/Gilroy-ExtraBold.ttf);
-}
-
-@font-face {
-  font-family: gilroy-heavy;
-  src: url(fonts/Gilroy-Heavy.ttf);
-}
-
-@font-face {
-  font-family: gilroy-regular;
-  src: url(fonts/Gilroy-Regular.ttf);
-}
-
-@font-face {
-  font-family: gilroy-medium;
-  src: url(fonts/Gilroy-Medium.ttf);
-}
-
-@font-face {
-  font-family: gilroy-thin;
-  src: url(fonts/Gilroy-Thin.ttf);
+.updated {
+  font-family: 'AvenirNextLTPro-Demi', sans-serif;
+  color: var(--orange-light);
+  font-size: 1rem;
 }

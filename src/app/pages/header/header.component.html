@@ -1,59 +1,36 @@
 <header
-  class="flex flex-row align-items-center align-content-between py-5"
+  class="flex flex-row align-items-center align-content-between p-4 bg-ocean text-white"
 >
-  <div class="flex flex-1 align-items-center px-5">
+  <div class="flex flex-1 align-items-center justify-content-start">
     <a
       href="javascript(void)"
       [routerLink]="['/']"
       routerLinkActive="link-active"
-      class="flex align-items-center justify-content-center text-gray-900 text-5xl font-gilroy-bold"
+      class="flex align-items-center justify-content-center text-3xl font-avenir-medium"
     >
-      DEBT<img height="40" width="40" style="margin-bottom: 4px; margin-left: 2px; margin-right: 2px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMSw4IEwyMSw1IEwzLDUgTDMsOCBMMjEsOCBaIE0yMSwxMCBMMywxMCBMMywxNyBMMjEsMTcgTDIxLDEwIFogTTIuODE4MTgxODIsMyBMMjEuMTgxODE4MiwzIEMyMi4xODU5NzIzLDMgMjMsMy44OTU0MzA1IDIzLDUgTDIzLDE3IEMyMywxOC4xMDQ1Njk1IDIyLjE4NTk3MjMsMTkgMjEuMTgxODE4MiwxOSBMMi44MTgxODE4MiwxOSBDMS44MTQwMjc3MywxOSAxLDE4LjEwNDU2OTUgMSwxNyBMMSw1IEMxLDMuODk1NDMwNSAxLjgxNDAyNzczLDMgMi44MTgxODE4MiwzIFoiLz4KPC9zdmc+Cg==">XPERTS
-
-      <!--
-      <span class="text-5xl font-gilroy-heavy" style="margin-bottom: 5px"
-        >DEBT</span
-      >
-      <span class="text-3xl font-gilroy-bold">EXPERTS</span>
-      <span class="text-lg font-gilroy-medium">.</span>
-      <span class="text-lg font-gilroy-medium">org</span></a
-    >
-    -->
+      DEBT<img height="34" width="34" style="margin-bottom: 2px; margin-left: 2px; margin-right: 2px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMSw4IEwyMSw1IEwzLDUgTDMsOCBMMjEsOCBaIE0yMSwxMCBMMywxMCBMMywxNyBMMjEsMTcgTDIxLDEwIFogTTIuODE4MTgxODIsMyBMMjEuMTgxODE4MiwzIEMyMi4xODU5NzIzLDMgMjMsMy44OTU0MzA1IDIzLDUgTDIzLDE3IEMyMywxOC4xMDQ1Njk1IDIyLjE4NTk3MjMsMTkgMjEuMTgxODE4MiwxOSBMMi44MTgxODE4MiwxOSBDMS44MTQwMjc3MywxOSAxLDE4LjEwNDU2OTUgMSwxNyBMMSw1IEMxLDMuODk1NDMwNSAxLjgxNDAyNzczLDMgMi44MTgxODE4MiwzIFoiLz4KPC9zdmc+Cg==">XPERTS
+      <span class="text-sm">.ORG</span>
     </a>
   </div>
-  <div class="flex flex-1 align-items-center justify-content-center">
+  <div class="flex flex-1 text-base align-items-center justify-content-center">
     <p-menu #menu [model]="siteLinks" [popup]="true"></p-menu>
     <a
-      class="px-3 py-2 text-md text-gray-900 font-gilroy-bold"
+      class="px-3 py-2"
       (click)="menu.toggle($event)"
       >Debt Relief Options<i class="pi pi-chevron-down px-2 text-xs"></i
     ></a>
   </div>
-  <div class="flex flex-1 align-items-center justify-content-center">
-    <p-menu #menu [model]="siteLinks" [popup]="true"></p-menu>
-    <a
-      class="px-3 py-2 text-md text-gray-900 font-gilroy-bold"
-      (click)="menu.toggle($event)"
-      >Debt Relief Reviews<i class="pi pi-chevron-down px-2 text-xs"></i
-    ></a>
-  </div>
-  <div class="flex flex-1 align-items-center justify-content-center">
-    <p-menu #menu [model]="siteLinks" [popup]="true"></p-menu>
-    <a
-      class="px-3 py-2 text-md text-gray-900 font-gilroy-bold"
-      (click)="menu.toggle($event)"
-      >Debt Relief Rankings<i class="pi pi-chevron-down px-2 text-xs"></i
-    ></a>
-  </div>
-  <div class="flex flex-1 align-items-center justify-content-center">
+  <div class="flex flex-1 align-items-center justify-content-end">
     <p-button
+      size="small"
       label="Get Started"
-      severity=""
-      [rounded]="false"
-      [style]="{ backgroundColor: 'white', color: 'black' }"
+      [style]="{ backgroundColor: '#ff5037', color: 'white', border: 0, }"
     ></p-button>
   </div>
 </header>
+<nav>
+  
+</nav>
 <!--
   <form [formGroup]="selectLoanForm">
       <p-dropdown

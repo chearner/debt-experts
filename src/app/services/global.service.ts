@@ -9,7 +9,7 @@ import { GlobalState } from '../models/global-state';
 })
 export class GlobalService {
   public globalState: GlobalState = {
-    siteNameDotCom: 'DebtExperts.com',
+    siteNameDotCom: 'DebtExperts.org',
     siteName: 'Debt Experts',
   };
 

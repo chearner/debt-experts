@@ -1,2 +1,23 @@
+<div class="">
 <h1>Contact Us</h1>
-<p>Please send email.</p>
+<form [formGroup]="contactFormGroup" (ngSubmit)="handleSubmit()">
+    <div class="field">
+        <label for="nameInput">Name:</label>
+        <input class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" type="text" id="nameInput" formControlName="nameFormControl"/>
+    </div>
+    <div class="field">
+        <label for="emailInput">Email:</label>
+        <input class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" type="text" id="emailInput" formControlName="emailFormControl"/>
+    </div>
+    <div class="field">
+        <label for="messageInput">Message:</label>
+        <textarea class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" rows="5" cols="30" pInputTextarea formControlName="messageFormControl"></textarea>
+    </div>
+    <div>
+        {{ contactFormGroup.value | json }}
+    </div>
+    <div>
+        <p-button label="Submit"></p-button>
+    </div>
+</form>
+</div>
