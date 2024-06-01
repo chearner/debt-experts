@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
 import { DebtConsolidationLoanComponent } from './pages/best/debt-consolidation-loan/debt-consolidation-loan.component';
+import { DebtSettlementServiceComponent } from './pages/best/debt-settlement-service/debt-settlement-service.component';
+import { DebtManagementProgramComponent } from './pages/best/debt-management-program/debt-management-program.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FaqsComponent } from './pages/faqs/faqs.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
@@ -21,6 +23,16 @@ export const routes: Routes = [
     path: 'best/debt-consolidation-loan',
     title: 'Best Debt Consolidation Loans',
     component: DebtConsolidationLoanComponent,
+  },
+  {
+    path: 'best/debt-settlement-service',
+    title: 'Best Debt Settlement Services',
+    component: DebtSettlementServiceComponent,
+  },
+  {
+    path: 'best/debt-management-program',
+    title: 'Best Debt Management Program',
+    component: DebtManagementProgramComponent,
   },
   { path: 'faqs', title: 'FAQs', component: FaqsComponent },
   { path: 'about-us', title: 'About Us', component: AboutUsComponent },

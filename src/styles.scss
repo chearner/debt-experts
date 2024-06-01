@@ -4,6 +4,29 @@
 @import "primeicons/primeicons.css";
 @import "./fonts/avenir/font.css";
 
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v177/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzaqkNCeE.woff2) format('woff2');
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
 .dm-sans-200 {
   font-family: "DM Sans", sans-serif;
   font-optical-sizing: auto;
@@ -73,6 +96,10 @@
   font-style: normal;
 }
 
+.font-avenir-bold {
+  font-family: "AvenirNextLTPro-Bold", sans-serif;
+}
+
 .font-avenir-demi {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
 }
@@ -86,9 +113,17 @@
 }
 
 :root {
+  --dark-gray: #231F20;
+  --light-tan: #F9EBB2;
+  --light-gray: #394240;
+  --light-green: #B4CCB9;
+  --light-red: #F76D57;
+  --dark-blue: #506C7F;
+  --light-blue: #45AAB8;
+
   --stone: #f5f6f0;
   --sand: #ffebcc;
-  --cyan: #51e5da;
+  --cyan: #e1f5ff;
   --ocean: #2d55aa;
   --maroon-dark: #433a44;
   --maroon-light: #696169;
@@ -98,7 +133,12 @@
   --primary-color: rgb(49 43 65 / 100%);
   --primary-color-text: rgb(49 43 65 / 100%);
   --highlight-text-color: #ff5037;
+  --text-light: rgb(0 0 0 / 100%);
   --text-dark: rgb(49 43 65 / 100%);
+}
+
+.bg-sky {
+  background-color: var(--cyan);
 }
 
 .bg-ocean {
@@ -106,7 +146,7 @@
 }
 
 .bg-sand {
-  background-color: var(--sand);
+  background-color: var(--light-tan);
 }
 
 html {
@@ -118,23 +158,48 @@ html {
 body {
   padding: 0;
   margin: 0;
-  background-color: var(--stone);
   font-family: "AvenirNextLTPro-Regular", sans-serif;
 }
 
 h1 {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 2rem;
+  margin: 1.5rem 0 1rem;
+  text-transform: uppercase;
 }
 
 h2 {
-  font-family: "AvenirNextLTPro-Bold", sans-serif;
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 1.75rem;
+  margin: 1rem 0 1rem;
+  text-transform: uppercase;
 }
 
-h3,
-h4,
+h3 {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 1.5rem;
+  margin: 1.25rem 0 1rem;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: 1.25rem;
+  margin: 1rem 0 1rem;
+  text-transform: uppercase;
+}
+
 h5,
 h6 {
-  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-family: "AvenirNextLTPro-Medium", sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1rem;
 }
 
 section {
@@ -144,11 +209,6 @@ section {
 }
 
 header {
-  svg {
-    color: var(--orange-light);
-    fill: var(--orange-light);
-  }
-
   a:link,
   a:active,
   a:hover,
@@ -159,13 +219,11 @@ header {
 }
 
 footer {
-  background-color: var(--sand);
-
   a:link,
   a:active,
   a:hover,
   a:visited {
-    color: var(--text-gray-900);
+    color: var(--text-white);
     text-decoration: none;
   }
 }
@@ -174,8 +232,54 @@ footer {
   width: max-content;
 }
 
+.p-tag {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  font-size: .5rem;
+  margin: 0 1rem;
+}
+
 .updated {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
   color: var(--orange-light);
   font-size: 1rem;
+}
+
+#ocean {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  min-height: 50px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #2d55aa),
+    color-stop(0.5, #2d55aa)
+  );
+}
+
+.wave {
+  background:var(--cyan);
+  display: inline-block;
+  width: 10px;
+  position: absolute;
+  animation: dostuff 10s infinite ease-in-out;
+}
+
+@keyframes dostuff {
+  0% {
+    height: 90%;
+  }
+  30% {
+    height: 10%;
+  }
+  50% {
+    height: 50%;
+  }
+  70% {
+    height: 10%;
+  }
+  100% {
+    height: 90%;
+  }
 }

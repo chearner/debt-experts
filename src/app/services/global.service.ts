@@ -9,8 +9,7 @@ import { GlobalState } from '../models/global-state';
 })
 export class GlobalService {
   public globalState: GlobalState = {
-    siteNameDotCom: 'DebtExperts.org',
-    siteName: 'Debt Experts',
+    siteName: 'Debt-Experts.org',
   };
 
   // student loans, debt-consolidation loans, home improvement loans, home equity loans, small business loans, mortage loans, auto loans

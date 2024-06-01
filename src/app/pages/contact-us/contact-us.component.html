@@ -1,23 +1,37 @@
-<div class="">
-<h1>Contact Us</h1>
-<form [formGroup]="contactFormGroup" (ngSubmit)="handleSubmit()">
+<div class="px-5 col-8 col-offset-2">
+  <h2>Contact Us</h2>
+  <form [formGroup]="contactFormGroup" (ngSubmit)="handleSubmit()">
     <div class="field">
-        <label for="nameInput">Name:</label>
-        <input class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" type="text" id="nameInput" formControlName="nameFormControl"/>
+      <label for="nameInput">Name:</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="text"
+        id="nameInput"
+        formControlName="nameFormControl"
+      />
     </div>
     <div class="field">
-        <label for="emailInput">Email:</label>
-        <input class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" type="text" id="emailInput" formControlName="emailFormControl"/>
+      <label for="emailInput">Email:</label>
+      <input
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        type="text"
+        id="emailInput"
+        formControlName="emailFormControl"
+      />
     </div>
     <div class="field">
-        <label for="messageInput">Message:</label>
-        <textarea class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" rows="5" cols="30" pInputTextarea formControlName="messageFormControl"></textarea>
+      <label for="messageInput">Message:</label>
+      <textarea
+        class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"
+        rows="5"
+        cols="30"
+        pInputTextarea
+        formControlName="messageFormControl"
+      ></textarea>
     </div>
     <div>
         {{ contactFormGroup.value | json }}
+      <p-button label="Submit"></p-button>
     </div>
-    <div>
-        <p-button label="Submit"></p-button>
-    </div>
-</form>
+  </form>
 </div>

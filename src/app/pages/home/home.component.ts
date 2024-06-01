@@ -1,5 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule, formatDate } from '@angular/common';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  Inject,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  HostListener
+} from '@angular/core';
+import { CommonModule, formatDate, DOCUMENT } from '@angular/common';
 import { GlobalService } from '../../services/global.service';
 import { ParallaxDirective } from '../../directives/parallax.directive';
 import { TagModule } from 'primeng/tag';
@@ -10,25 +19,55 @@ import { DividerModule } from 'primeng/divider';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ParallaxDirective, TagModule, BadgeModule, ButtonModule, DividerModule],
+  imports: [
+    CommonModule,
+    ParallaxDirective,
+    TagModule,
+    BadgeModule,
+    ButtonModule,
+    DividerModule,
+  ],
   providers: [GlobalService],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, AfterViewInit {
   dateYear = formatDate(new Date(), 'yyyy', 'en');
-  
-  constructor(public globalService: GlobalService) {}
+  waveWidth: number = 10;
+  waveCount: number = 40;
+  docFrag: any = null;
+  ocean: any = null;
 
-  ngOnInit() {
-    //console.log('asdfsa')
-    //let text = document.getElementById('text');
+  constructor(
+    public globalService: GlobalService,
+    private elementRef: ElementRef,
+    private renderer: Renderer2,
+    @Inject(DOCUMENT) private document: Document
+  ) {}
 
-    //text!.style.color = 'green';
+  @HostListener('window:resize', ['$event.target.innerWidth']) onResize(width: number) {
+    this.ocean = this.document.getElementById('ocean');
+    if (this.ocean) {
+        this.waveCount = Math.floor(
+          width / this.waveWidth
+        ) + 1;
+        let docFrag = this.document.createDocumentFragment();
+        for (var i = 0; i < this.waveCount; i++) {
+          var wave = this.document.createElement('div');
+          wave.className += 'wave';
+          docFrag.appendChild(wave);
+          wave.style.left = i * this.waveWidth + 'px';
+          wave.style.animationDelay = i / 100 + 's';
+        }
+        this.ocean.appendChild(docFrag);
+    }
+  }
 
-    //window.addEventListener('scroll', function(){
-      //var value = this.window.scrollY;
-      //text!.style.top = value * .9 + 'px';
-    //})
+  ngOnInit(): void {
+    //
+  }
+
+  ngAfterViewInit(): void {
+    //
   }
 }

@@ -1,18 +1,20 @@
 <header
-  class="flex flex-row align-items-center align-content-between p-4 bg-ocean text-white"
+  class="flex flex-row align-items-center align-content-between pt-4 px-4 text-gray-700 bg-sky"
 >
   <div class="flex flex-1 align-items-center justify-content-start">
     <a
       href="javascript(void)"
       [routerLink]="['/']"
       routerLinkActive="link-active"
-      class="flex align-items-center justify-content-center text-3xl font-avenir-medium"
+      class="flex align-items-center justify-content-center text-4xl font-avenir-bold"
     >
-      DEBT<img height="34" width="34" style="margin-bottom: 2px; margin-left: 2px; margin-right: 2px;" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICA8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMSw4IEwyMSw1IEwzLDUgTDMsOCBMMjEsOCBaIE0yMSwxMCBMMywxMCBMMywxNyBMMjEsMTcgTDIxLDEwIFogTTIuODE4MTgxODIsMyBMMjEuMTgxODE4MiwzIEMyMi4xODU5NzIzLDMgMjMsMy44OTU0MzA1IDIzLDUgTDIzLDE3IEMyMywxOC4xMDQ1Njk1IDIyLjE4NTk3MjMsMTkgMjEuMTgxODE4MiwxOSBMMi44MTgxODE4MiwxOSBDMS44MTQwMjc3MywxOSAxLDE4LjEwNDU2OTUgMSwxNyBMMSw1IEMxLDMuODk1NDMwNSAxLjgxNDAyNzczLDMgMi44MTgxODE4MiwzIFoiLz4KPC9zdmc+Cg==">XPERTS
-      <span class="text-sm">.ORG</span>
+      DEBT<span class="material-symbols-rounded mb-1">
+        credit_card
+        </span>EXPERTS
+      <span class="text-lg">.ORG</span>
     </a>
   </div>
-  <div class="flex flex-1 text-base align-items-center justify-content-center">
+  <div class="flex flex-1 text-base align-items-center justify-content-center cursor-pointer">
     <p-menu #menu [model]="siteLinks" [popup]="true"></p-menu>
     <a
       class="px-3 py-2"
@@ -24,7 +26,6 @@
     <p-button
       size="small"
       label="Get Started"
-      [style]="{ backgroundColor: '#ff5037', color: 'white', border: 0, }"
     ></p-button>
   </div>
 </header>
