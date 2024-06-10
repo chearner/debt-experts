@@ -2,14 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { formatDate } from '@angular/common';
-import { HeaderComponent } from './pages/header/header.component';
-import { FooterComponent } from './pages/footer/footer.component';
-import { MenuComponent } from './pages/menu/menu.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { MenuComponent } from './components/menu/menu.component';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { PrimeNGConfig } from 'primeng/api';
-import { GlobalService } from './services/global.service';
 import { DividerModule } from 'primeng/divider';
 import { ParallaxDirective } from './directives/parallax.directive';
+import { GlobalService } from '@services';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,6 @@ import { ParallaxDirective } from './directives/parallax.directive';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  pageTitle: string = 'zzzzzz';
   dateYear: string = formatDate(new Date(), 'yyyy', 'en');
   breadcrumb: any = {
     current: [{ label: 'Debt Experts' }],
@@ -43,5 +43,7 @@ export class AppComponent implements OnInit {
     public globalService: GlobalService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 }

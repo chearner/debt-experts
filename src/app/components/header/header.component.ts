@@ -12,7 +12,7 @@ import {
   FormBuilder,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { GlobalService } from '../../services/global.service';
+import { GlobalService } from '../../../../projects/services/src/lib/global.service';
 import { SiteLinks } from '../../models/site-links';
 
 @Component({

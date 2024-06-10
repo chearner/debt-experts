@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule, formatDate } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
-import { GlobalService } from '../../services/global.service';
+import { GlobalService } from '../../../../projects/services/src/lib/global.service';
 import { DividerModule } from 'primeng/divider';
 
 @Component({

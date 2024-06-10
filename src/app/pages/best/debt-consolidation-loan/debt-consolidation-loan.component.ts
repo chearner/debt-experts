@@ -3,7 +3,7 @@ import { CommonModule, formatDate } from '@angular/common';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { GlobalService } from '../../../services/global.service';
+import { GlobalService } from '../../../../../projects/services/src/lib/global.service';
 import { SiteLinks } from '../../../models/site-links';
 
 @Component({
@@ -25,7 +25,6 @@ export class DebtConsolidationLoanComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params: ParamMap) => {
-      console.log(params.get('siteLink'));
       this.siteLink = params.get('siteLink');
     });
   }

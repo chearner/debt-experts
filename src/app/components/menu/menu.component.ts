@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { GlobalService } from '../../services/global.service';
+import { GlobalService } from '../../../../projects/services/src/lib/global.service';
 
 @Component({
   selector: 'app-menu',

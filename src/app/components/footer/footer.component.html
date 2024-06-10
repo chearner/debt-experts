@@ -1,0 +1,97 @@
+<footer class="grid p-5 text-white bg-gray-900">
+  <div class="col-4">
+    <a
+      href="javascript(void)"
+      [routerLink]="['/']"
+      routerLinkActive="link-active"
+      class="flex align-items-center text-2xl font-avenir-medium"
+    >
+      DEBT<span class="material-symbols-rounded text-4xl mb-1">
+        credit_card </span
+      >EXPERTS
+      <span class="text-sm">.ORG</span>
+    </a>
+  </div>
+  <div class="col-4">
+    <ul class="list-none p-0 m-0">
+      <li *ngFor="let o of globalService.siteLinks; index as i">
+        <a
+          class="transition-duration-150 cursor-pointer block my-2"
+          href="#"
+          [routerLink]="['best/', o.label!.split(' ').join('-') | lowercase]"
+          routerLinkActive="link-active"
+          >Best {{ o.label }}s</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="col-4">
+    <ul class="list-none p-0 m-0">
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/contact-us']"
+          routerLinkActive="link-active"
+          >Contact Us</a
+        >
+      </li>
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/terms-of-service']"
+          routerLinkActive="link-active"
+          >Terms of Service</a
+        >
+      </li>
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/privacy-policy']"
+          routerLinkActive="link-active"
+          >Privacy Policy</a
+        >
+      </li>
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/cookie-policy']"
+          routerLinkActive="link-active"
+          >Cookie Policy</a
+        >
+      </li>
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/advertiser disclosure']"
+          routerLinkActive="link-active"
+          >Advertiser Disclosure</a
+        >
+      </li>
+      <li>
+        <a
+          class="transition-duration-150 cursor-pointer my-2 block"
+          href="#"
+          [routerLink]="['/site-map']"
+          routerLinkActive="link-active"
+          >Site Map</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div class="col-12 text-xs">
+    {{ globalService.globalState.siteName }} is compensated by the affiliates on
+    this site but this does not influence our evaluations. We are not paid to
+    rank companies in any particular order and our opinions are our own. The
+    information contained in {{ globalService.globalState.siteName }} is not
+    legal, financial, or investment advice and is not an endorsement or
+    recommendation of any of the companies or the products or services appearing
+    on {{ globalService.globalState.siteName }}. All information on
+    {{ globalService.globalState.siteName }} is believed to be accurate and is
+    subject to change.
+  </div>
+</footer>

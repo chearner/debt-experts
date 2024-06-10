@@ -5,14 +5,15 @@
 @import "./fonts/avenir/font.css";
 
 @font-face {
-  font-family: 'Material Symbols Rounded';
+  font-family: "Material Symbols Rounded";
   font-style: normal;
   font-weight: 100 700;
-  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v177/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzaqkNCeE.woff2) format('woff2');
+  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v177/sykg-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjzaqkNCeE.woff2)
+    format("woff2");
 }
 
 .material-symbols-rounded {
-  font-family: 'Material Symbols Rounded';
+  font-family: "Material Symbols Rounded";
   font-weight: normal;
   font-style: normal;
   font-size: 48px;
@@ -23,7 +24,7 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  -webkit-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
 
@@ -113,13 +114,13 @@
 }
 
 :root {
-  --dark-gray: #231F20;
-  --light-tan: #F9EBB2;
+  --dark-gray: #231f20;
+  --light-tan: #f9ebb2;
   --light-gray: #394240;
-  --light-green: #B4CCB9;
-  --light-red: #F76D57;
-  --dark-blue: #506C7F;
-  --light-blue: #45AAB8;
+  --light-green: #b4ccb9;
+  --light-red: #f76d57;
+  --dark-blue: #506c7f;
+  --light-blue: #45aab8;
 
   --stone: #f5f6f0;
   --sand: #ffebcc;
@@ -163,38 +164,38 @@ body {
 
 h1 {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
-  font-size: 2rem;
+  font-size: 1.75rem;
   margin: 1.5rem 0 1rem;
-  text-transform: uppercase;
 }
 
 h2 {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
   font-size: 1.75rem;
   margin: 1rem 0 1rem;
-  text-transform: uppercase;
 }
 
 h3 {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin: 1.25rem 0 1rem;
-  text-transform: uppercase;
 }
 
 h4 {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
-  font-size: 1.25rem;
-  margin: 1rem 0 1rem;
-  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
 }
 
-h5,
-h6 {
+h5 {
   font-family: "AvenirNextLTPro-Medium", sans-serif;
   font-size: 1rem;
   margin: 0;
-  text-transform: uppercase;
+}
+
+h6 {
+  font-family: "AvenirNextLTPro-Medium", sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 p {
@@ -202,13 +203,17 @@ p {
   font-size: 1rem;
 }
 
-section {
-  a {
-    font-family: "AvenirNextLTPro-Demi", sans-serif;
-  }
+a {
+  font-family: "AvenirNextLTPro-Demi", sans-serif;
+  text-decoration: none;
+}
+
+main {
+  padding: 0 3rem;
 }
 
 header {
+  padding: 1rem 3rem;
   a:link,
   a:active,
   a:hover,
@@ -219,6 +224,7 @@ header {
 }
 
 footer {
+  padding: 1rem 3rem;
   a:link,
   a:active,
   a:hover,
@@ -228,13 +234,20 @@ footer {
   }
 }
 
+.bubble {
+  background: green;
+  border-radius: 50%;
+  color: white;
+  padding: 10px;
+}
+
 .p-menu {
   width: max-content;
 }
 
 .p-tag {
   font-family: "AvenirNextLTPro-Demi", sans-serif;
-  font-size: .5rem;
+  font-size: 0.5rem;
   margin: 0 1rem;
 }
 
@@ -259,7 +272,7 @@ footer {
 }
 
 .wave {
-  background:var(--cyan);
+  background: var(--cyan);
   display: inline-block;
   width: 10px;
   position: absolute;

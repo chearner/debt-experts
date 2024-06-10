@@ -9,12 +9,14 @@ import {
   HostListener
 } from '@angular/core';
 import { CommonModule, formatDate, DOCUMENT } from '@angular/common';
-import { GlobalService } from '../../services/global.service';
+import { GlobalService } from '../../../../projects/services/src/lib/global.service';
 import { ParallaxDirective } from '../../directives/parallax.directive';
 import { TagModule } from 'primeng/tag';
 import { BadgeModule } from 'primeng/badge';
 import { ButtonModule } from 'primeng/button';
 import { DividerModule } from 'primeng/divider';
+import { ReviewComponent } from '../../components/review/review.component';
+import { TipComponent } from '../../components/tip/tip.component';
 
 @Component({
   selector: 'app-home',
@@ -26,6 +28,8 @@ import { DividerModule } from 'primeng/divider';
     BadgeModule,
     ButtonModule,
     DividerModule,
+    ReviewComponent,
+    TipComponent,
   ],
   providers: [GlobalService],
   templateUrl: './home.component.html',

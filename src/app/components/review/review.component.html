@@ -1,0 +1,13 @@
+<div class="grid border-2 border-round-xl m-2 p-3">
+  <div class="col-3 flex flex-column">
+    <h6>{{ site.name }}</h6>
+    <span><i class="pi pi-star-fill mr-1 text-yellow-300"></i>{{ site.rating }}.0</span>
+    <p-button class="mt-3" label="Get Rate" title="Get Rate"></p-button>
+  </div>
+  <div class="col-9 flex flex-column">
+    <div class="mb-3">
+      {{ site.description }}
+    </div>
+    <a href="{{ site.link }}" target="_blank" rel="nofollow">Visit {{ site.name }}'s Website</a>
+  </div>
+</div>

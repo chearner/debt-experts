@@ -1,37 +1,30 @@
-<header
-  class="flex flex-row align-items-center align-content-between pt-4 px-4 text-gray-700 bg-sky"
->
-  <div class="flex flex-1 align-items-center justify-content-start">
+<header class="grid">
+  <div class="col-4 flex align-items-center">
     <a
       href="javascript(void)"
       [routerLink]="['/']"
       routerLinkActive="link-active"
-      class="flex align-items-center justify-content-center text-4xl font-avenir-bold"
+      class="flex align-items-center text-3xl font-avenir-bold"
     >
-      DEBT<span class="material-symbols-rounded mb-1">
-        credit_card
-        </span>EXPERTS
+      DEBT<span class="material-symbols-rounded mb-1 text-5xl">
+        credit_card </span
+      >EXPERTS
       <span class="text-lg">.ORG</span>
     </a>
   </div>
-  <div class="flex flex-1 text-base align-items-center justify-content-center cursor-pointer">
+  <div class="col-4 flex justify-content-center align-items-center cursor-pointer">
     <p-menu #menu [model]="siteLinks" [popup]="true"></p-menu>
     <a
-      class="px-3 py-2"
+      class="font-avenir-medium py-2 hover-border-bottom"
       (click)="menu.toggle($event)"
       >Debt Relief Options<i class="pi pi-chevron-down px-2 text-xs"></i
     ></a>
   </div>
-  <div class="flex flex-1 align-items-center justify-content-end">
-    <p-button
-      size="small"
-      label="Get Started"
-    ></p-button>
+  <div class="col-4 flex justify-content-center align-items-center">
+    <p-button size="small" label="Get Started"></p-button>
   </div>
 </header>
-<nav>
-  
-</nav>
+<nav></nav>
 <!--
   <form [formGroup]="selectLoanForm">
       <p-dropdown

@@ -1,0 +1,8 @@
+.hover-border-bottom {
+    border-bottom: 2px solid transparent;
+    
+    &:hover {
+        border-bottom: 2px solid black;
+        transition: border-bottom 1s;
+    }
+}

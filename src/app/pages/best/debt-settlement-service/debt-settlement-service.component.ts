@@ -3,7 +3,7 @@ import { CommonModule, formatDate } from '@angular/common';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
-import { GlobalService } from '../../../services/global.service';
+import { GlobalService } from '../../../../../projects/services/src/lib/global.service';
 import { SiteLinks } from '../../../models/site-links';
 
 @Component({
